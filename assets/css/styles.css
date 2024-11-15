@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#first {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  max-width: 100%;
+}
+
+#myVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: 0;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.682);
+  color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.content h1 {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    #1A1A1A,
+    #D4B8B3,
+    #F5F5F5,
+    #1A1A1A
+  );
+  background-size: 300%;
+  /* webkit serve per far vedere il gradiente */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content span {
+  background: linear-gradient(
+    45deg, 
+    #2C3E50,
+    #E74C3C,
+    #ECF0F1,
+    #2C3E50
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 8s linear infinite;
+}
+
+/* Media query per tablet */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Media query per mobile */
+@media (max-width: 576px) {
+  .content h1 {
+    font-size: 1.5rem;
+  }
+  
+  #first, footer {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
