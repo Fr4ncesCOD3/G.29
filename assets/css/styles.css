@@ -137,11 +137,18 @@ footer {
 
 .product-card {
     scroll-snap-align: start;
-    min-width: 280px;
-    max-width: 280px;
-    aspect-ratio: 1/1;
+    min-width: 300px;
+    max-width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    border: none;
     border-radius: 15px;
-    overflow: hidden;
 }
 
 .product-card .card {
@@ -350,6 +357,207 @@ footer ul li a:hover::before {
     .nav-item {
         margin-left: auto;
     }
+}
+
+/* Stile Modal */
+.modal-content {
+    border: none;
+    border-radius: 20px;
+}
+
+.modal-dialog-centered {
+    min-height: calc(100% - 60px);
+}
+
+.product-image-container {
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.product-image-container:hover {
+    background: #e9ecef;
+}
+
+/* Animazioni */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.products-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.products-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Per Firefox */
+    -ms-overflow-style: none; /* Per IE e Edge */
+    padding-bottom: 20px;
+}
+
+.products-scroll::-webkit-scrollbar {
+    display: none; /* Per Chrome, Safari e Opera */
+}
+
+#productsShowcase .col-md-6 {
+    flex: 0 0 auto;
+    width: 300px;
+    scroll-snap-align: start;
+}
+
+#productsShowcase .card {
+    transition: transform 0.3s ease;
+}
+
+#productsShowcase .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Stili form */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.input-group-text {
+    border-radius: 8px 0 0 8px;
+    background-color: #f8f9fa;
+}
+
+/* Stili cards */
+.products-scroll {
+    padding: 1rem 0.5rem;
+}
+
+#productsShowcase .card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+}
+
+#productsShowcase .card-body {
+    background-color: #ffffff;
+}
+
+#productsShowcase .card-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+#productsShowcase .card-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+#productsShowcase .badge {
+    font-size: 0.8rem;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+}
+
+#productsShowcase .btn-outline-primary {
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+}
+
+.category-card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.category-card.active .category-content {
+    border-color: #0d6efd;
+}
+
+.products-container {
+    margin-top: 2rem;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-group .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.product-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.product-card.deleting {
+    transform: scale(0) rotate(-10deg);
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Animazione per il messaggio di alert */
+.alert {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Animazione per il contenitore dei prodotti */
+.products-container {
+    min-height: 200px;
+    transition: height 0.5s ease-out;
+}
+
+/* Effetto hover per le cards */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Animazione per il bottone elimina */
+.delete-product {
+    transition: all 0.3s ease;
+}
+
+.delete-product:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: scale(1.05);
 }
 
 
